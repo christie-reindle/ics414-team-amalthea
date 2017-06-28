@@ -25,7 +25,7 @@ float adjustbrightness;
  
 public void setup() {
   
-  colorMode(HSB, 255);
+  colorMode(HSB, 99);
   noStroke();
   String url = "https://processing.org/img/processing-web.png";
   photo = loadImage(url, "png");
@@ -34,13 +34,13 @@ public void setup() {
   cp5 = new ControlP5(this);
  
   cp5.addSlider("Brightness_Level")
-    .setRange(-128, 127)
+    .setRange(-99, 99)
       .setValue(0)
         .setPosition(100, 370)
           .setSize(100, 10);
           
   cp5.addSlider("Color_Level")
-    .setRange(0, 255)
+    .setRange(0, 99)
       .setValue(0)
         .setPosition(100, 385)
           .setSize(100, 10);         
