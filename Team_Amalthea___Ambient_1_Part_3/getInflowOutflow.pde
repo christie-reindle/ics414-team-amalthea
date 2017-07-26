@@ -20,8 +20,8 @@ int getInflowOutflow() {
   } 
   
   // Outflow and inflow strings to int value
-  int out = Integer.parseInt(outflow);
-  int in = Integer.parseInt(inflow);
+  out = Integer.parseInt(outflow);
+  in = Integer.parseInt(inflow);
   
-  return out - in;
+  return (out - in)/99;
 }

@@ -1,12 +1,10 @@
-import java.util.Random;
-
 float getStockQuote() {
     String stockUrl = "https://www.google.com/finance/info?q=NASDAQ:";
     
     String[] stocks = {"MU","STX","QQQ","BBBY","MSFT","HBAN","AAPL","SIRI","CMCSA","INTC","FB","CSCO","NVDA","SRPT","FOXA","TLT","SPLS","GILD","JD","JBLU"};
     Random rand = new Random();
     int  n = rand.nextInt(stocks.length);
-    String stockSymbol = stocks[n];
+    stockSymbol = stocks[n];
     
     stockUrl += stockSymbol;
     
@@ -17,6 +15,6 @@ float getStockQuote() {
     int end = str.indexOf("\"", start);
     String cp = str.substring(start, end);
     
-    println(stockSymbol);
+    //println(stockSymbol);
     return float(cp);
 }
