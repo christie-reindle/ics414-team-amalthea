@@ -3,6 +3,7 @@ import java.util.Random;
 int out;
 int in;
 String stockSymbol;
+String stockName;
 
 void setup(){
   size(800, 800);
@@ -21,5 +22,5 @@ void draw(){
   fill(50);
   textSize(50);
   text(stockSymbol, 550, 400);
-  text(getStockQuote(), 530, 450);
+  text(getStockQuote()+"%", 530, 450);
 }
