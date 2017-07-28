@@ -23,5 +23,9 @@ int getInflowOutflow() {
   out = Integer.parseInt(outflow);
   in = Integer.parseInt(inflow);
   
-  return (out - in)/99;
+  int colorVal = (out - in)/20;
+  if (colorVal > 64) {
+    colorVal = 64;
+  }
+  return colorVal;
 }

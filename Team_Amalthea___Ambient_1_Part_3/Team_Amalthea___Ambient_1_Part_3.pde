@@ -8,16 +8,18 @@ String stockName;
 void setup(){
   size(800, 800);
   noStroke();
+  colorMode(HSB, 99);
 }
 
 void draw(){
-  println(getInflowOutflow());
-  brightness(getInflowOutflow());
-  color c = color(getInflowOutflow(), 137, 244);
+  //brightness(getInflowOutflow());
+  color c = color(getInflowOutflow(), 100, 100); //0-64
   fill(c);
   rect(0, 0, 400, 800);
-  println(int(getStockQuote()*99));
-  fill(int(getStockQuote()*99));
+  
+  float cp = getStockQuote();
+  color c2 = color(getStockColor(cp), 100, 100); //0-33
+  fill(c2);
   rect(400, 0, 400, 800);
   fill(50);
   textSize(50);
